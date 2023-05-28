@@ -4,7 +4,6 @@ com\mycompany\retria\services\Service$1.class
 com\mycompany\retria\MODEL\MaquinaUltrassomEspecificada.class
 com\mycompany\retria\MODEL\TipoComponente.class
 com\mycompany\retria\validadores\ValidadorDeComponentes.class
-com\mycompany\retria\RetriaLoginCli.class
 com\mycompany\retria\MODEL\Empresa.class
 com\mycompany\retria\DAO\EmpresaDAO.class
 com\mycompany\retria\DAO\MaquinaUltrassomDAO.class
