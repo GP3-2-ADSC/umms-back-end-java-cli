@@ -33,7 +33,6 @@ public class SlackRetria {
         if (ChronoUnit.MINUTES.between(teste, teste2) >= 1) {
             try {
                 System.out.println("ESTOU NA CLASSE DO SLACK");
-                System.out.println("O LINK É " + webHooksUrl);
                 StringBuilder msgbuilde = new StringBuilder();
                 msgbuilde.append(mensagem);
                 Payload payload = Payload.builder().channel(slackChannel).text(msgbuilde.toString()).build();

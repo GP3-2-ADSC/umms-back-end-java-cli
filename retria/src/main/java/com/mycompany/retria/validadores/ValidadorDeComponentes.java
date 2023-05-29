@@ -136,6 +136,7 @@ public class ValidadorDeComponentes {
 
     public void validarRede(Integer fkRede) {
         try {
+
             List<RedeInterface> interfaces = looca.getRede().getGrupoDeInterfaces().getInterfaces();
             RedeInterface redeAtual = interfaces.get(0);
 
@@ -158,4 +159,5 @@ public class ValidadorDeComponentes {
             throw new RuntimeException(e);
         }
     }
+
 }

@@ -8,7 +8,7 @@ Data = 2023-05-28
 <------- Informações da máquina --------->
 
 Numero serial = BFEBFBFF000A0655
-Administrador = Lucas Silva
+Administrador = Lucas Lima
 Sistema operacional = Windows
 Status da maquina = true
 
@@ -23,13 +23,13 @@ Frequência: 4104000000
 Número de Pacotes Físicos: 1
 Número de CPUs Fisícas: 6
 Número de CPUs Lógicas: 12
-Em Uso: 8,2
+Em Uso: 5,6
 
 
 Memória ram ----->
 Memoria
-Em uso: 7,9 GiB
-Disponível: 8,0 GiB
+Em uso: 9,2 GiB
+Disponível: 6,7 GiB
 Total: 15,9 GiB
 
 
@@ -38,7 +38,7 @@ UUID: 8100ebb2-032c-4967-95dd-b5fab5ce4bc6
 nome: Disco Fixo Local (C:)
 volume: \\?\Volume{8100ebb2-032c-4967-95dd-b5fab5ce4bc6}\
 total: 239324762112
-disponível: 27587694592
+disponível: 26740064256
 tipo: NTFS
 ponto de montagem: C:\
 
@@ -46,47 +46,9 @@ ponto de montagem: C:\
 <------- OCORRÊNCIAS --------->
 
 
-28/05/2023 12:21:17 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:21:45 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:37:49 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:39:08 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:39:36 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:44:23 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:44:50 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:46:33 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:47:01 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:56:42 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:57:09 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:57:37 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 12:58:57 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:36:51 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:37:19 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:37:47 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:38:15 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:38:45 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:39:13 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:39:41 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:40:09 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:40:37 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:41:05 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:41:33 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:42:01 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:42:29 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:42:57 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:43:25 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:43:54 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:44:22 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:44:51 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:45:18 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:45:46 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:46:14 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:46:42 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:47:10 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:47:38 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:48:06 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:48:34 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:49:03 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:49:30 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:49:58 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:50:26 - Error on ping 54.226.244.94 - return code 1 => 
-28/05/2023 22:50:54 - Error on ping 54.226.244.94 - return code 1 => 
+28/05/2023 23:04:42 - Error on ping 54.226.244.94 - return code 1 => 
+28/05/2023 23:05:09 - Error on ping 54.226.244.94 - return code 1 => 
+28/05/2023 23:05:37 - Error on ping 54.226.244.94 - return code 1 => 
+28/05/2023 23:06:03 - Error on ping 54.226.244.94 - return code 1 => 
+28/05/2023 23:06:30 - Error on ping 54.226.244.94 - return code 1 => 
+28/05/2023 23:19:47 - Error on ping 54.226.244.94 - return code 1 => 

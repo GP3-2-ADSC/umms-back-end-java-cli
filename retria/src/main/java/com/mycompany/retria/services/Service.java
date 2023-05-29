@@ -24,6 +24,7 @@ public class Service {
 
 
     public void scriptDeValidacaoDeBanco(String emailAdm, String senha) {
+
         AdministradorDAO admDao = new AdministradorDAO();
 
         MaquinaUltrassomDAO maquinaUltrassomDAO = new MaquinaUltrassomDAO();
@@ -47,56 +48,54 @@ public class Service {
             return;
         }
 
-        especificacaoComponente.add(especificacaoComponenteDAO.getComponenteCpu(looca.getProcessador()));
-        especificacaoComponente.add(especificacaoComponenteDAO.getComponenteMemoria(looca.getMemoria()));
-        especificacaoComponente.add(especificacaoComponenteDAO.getRede(looca.getRede().getGrupoDeInterfaces().getInterfaces()));
+            especificacaoComponente.add(especificacaoComponenteDAO.getComponenteCpu(looca.getProcessador()));
+            especificacaoComponente.add(especificacaoComponenteDAO.getComponenteMemoria(looca.getMemoria()));
+            especificacaoComponente.add(especificacaoComponenteDAO.getRede(looca.getRede().getGrupoDeInterfaces().getInterfaces()));
 
-        for (Volume disco : discos) {
-            System.out.println("VOCÊ TEM " + discos.size() + " discos\n");
-            System.out.println("DISCO ATUAL\n");
-            System.out.println(disco);
+            for (Volume disco : discos) {
+                System.out.println("VOCÊ TEM " + discos.size() + " discos\n");
+                System.out.println("DISCO ATUAL\n");
+                System.out.println(disco);
 
-            if (convertBytesToGB(disco.getTotal()) >= 1) {
-                EspecificacaoComponente retorno = especificacaoComponenteDAO.getComponenteDisco(disco);
-                if (retorno != null) {
-                    especificacaoComponente.add(retorno);
+                if (convertBytesToGB(disco.getTotal()) >= 1) {
+                    EspecificacaoComponente retorno = especificacaoComponenteDAO.getComponenteDisco(disco);
+                    if (retorno != null) {
+                        especificacaoComponente.add(retorno);
+                    }
                 }
             }
-        }
 
-        maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.getMaquiUltassomEspecCPU(100.0,
-                maquinaUltrassom.getIdMaquina(),
-                especificacaoComponente.stream().filter(e -> e.getTipoComponente().equals(TipoComponente.CPU))
-                        .findFirst().get().getId_especificacao_componente()
-        ));
+            maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.getMaquiUltassomEspecCPU(100.0,
+                    maquinaUltrassom.getIdMaquina(),
+                    especificacaoComponente.stream().filter(e -> e.getTipoComponente().equals(TipoComponente.CPU))
+                            .findFirst().get().getId_especificacao_componente()
+            ));
 
-        maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.getMaquiUltassomEspecRAM(
-                100.0,
-                maquinaUltrassom.getIdMaquina(),
-                especificacaoComponente.stream().filter(e -> e.getTipoComponente().equals(TipoComponente.RAM))
-                        .findFirst().get().getId_especificacao_componente()
-        ));
+            maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.getMaquiUltassomEspecRAM(
+                    100.0,
+                    maquinaUltrassom.getIdMaquina(),
+                    especificacaoComponente.stream().filter(e -> e.getTipoComponente().equals(TipoComponente.RAM))
+                            .findFirst().get().getId_especificacao_componente()
+            ));
 
-        for (int i = 0; i < especificacaoComponente.size(); i++) {
-            EspecificacaoComponente esAtual = especificacaoComponente.get(i);
+            for (int i = 0; i < especificacaoComponente.size(); i++) {
+                EspecificacaoComponente esAtual = especificacaoComponente.get(i);
 
-            System.out.println("Passando essa maquina " + esAtual);
-            if (esAtual.getTipoComponente().equals(TipoComponente.DISCO)) {
-                maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.
-                        getMaquiUltassomEspecDISCO(100.0, maquinaUltrassom.
-                                getIdMaquina(), esAtual.getId_especificacao_componente()));
+                System.out.println("Passando essa maquina " + esAtual);
+                if (esAtual.getTipoComponente().equals(TipoComponente.DISCO)) {
+                    maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.
+                            getMaquiUltassomEspecDISCO(100.0, maquinaUltrassom.
+                                    getIdMaquina(), esAtual.getId_especificacao_componente()));
+                }
             }
+
+            maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.getMaquiUltassomEspecRede(
+                    maquinaUltrassom.getIdMaquina(),
+                    especificacaoComponente.stream().filter(e -> e.getTipoComponente().equals(TipoComponente.REDE))
+                            .findFirst().get().getId_especificacao_componente()
+            ));
+
         }
-
-        maquinaUltrassomEspec.add(maquinaUltrassomEspecificadaDAO.getMaquiUltassomEspecRede(
-                maquinaUltrassom.getIdMaquina(),
-                especificacaoComponente.stream().filter(e -> e.getTipoComponente().equals(TipoComponente.REDE))
-                        .findFirst().get().getId_especificacao_componente()
-        ));
-
-        }
-
-
 
     public void validarMetrica() throws ValidacaoException {
         MaquinaUltrassomDAO maquinaUltrassomDAO = new MaquinaUltrassomDAO();
@@ -132,7 +131,7 @@ public class Service {
 
         List<EspecificacaoComponente> componentesDisc = especificacaoComponente.stream()
                 .filter(e -> e.getTipoComponente().equals(TipoComponente.DISCO)).toList();
-
+        
         new Timer().scheduleAtFixedRate(new TimerTask() {
             public void run() {
                 if (!maquinaUltrassomDAO.getStatusAtual(maquinaUltrassom.getNumeroSerialMaquina()).equals("true")) {
@@ -181,6 +180,7 @@ public class Service {
         }, 0, 10000);
 
     }
+
 
     public void plotarIntroducaoAscii() {
         System.out.println("""

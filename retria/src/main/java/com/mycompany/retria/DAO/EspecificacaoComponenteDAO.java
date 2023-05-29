@@ -222,7 +222,7 @@ public class EspecificacaoComponenteDAO {
     }
 
     public EspecificacaoComponente getRede(List<RedeInterface> interfaces) {
-        RedeInterface redeAtual = interfaces.get(0);
+            RedeInterface redeAtual = interfaces.get(0);
         for (int i = 0; i < interfaces.size(); i++) {
             RedeInterface redeUsada = interfaces.get(i);
 

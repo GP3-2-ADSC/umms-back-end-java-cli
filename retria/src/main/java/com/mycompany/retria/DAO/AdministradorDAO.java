@@ -26,8 +26,7 @@ public class AdministradorDAO {
     }
 
     public Boolean consultar(String email, String senha) {
-        System.out.println("Email inserido ===> " + email);
-        System.out.println("Senha inserida ===> " + senha);
+
         List<Administrador> administradores = con.query(String.format("""
                         SELECT 
                             *
